@@ -60,3 +60,6 @@ jobs:
           brew test oloxx/tap/drop
           drop --version
           drop --help > /dev/null
+          # Instalado por Homebrew, `drop update` no se toca: manda a brew.
+          drop update | tee update.log
+          grep -q "brew upgrade drop" update.log
