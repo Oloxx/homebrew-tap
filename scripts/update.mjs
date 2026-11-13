@@ -32,6 +32,15 @@ const release = await res.json();
 const tag = release.tag_name;
 const version = tag.replace(/^v/, '');
 
+// Si no se pidio un tag concreto y la formula ya apunta a esta version, salimos
+// antes de bajar SHA256SUMS/.minisig para no inflar el download_count en GitHub.
+const before = fs.existsSync(FORMULA) ? fs.readFileSync(FORMULA, 'utf8') : '';
+const currentVersion = before.match(/^\s*version\s+"([^"]+)"/m)?.[1];
+if (!wanted && currentVersion === version) {
+  console.log(`Sin cambios: drop ${version}`);
+  process.exit(0);
+}
+
 async function download(name, dest) {
   const asset = release.assets.find((a) => a.name === name);
   if (!asset) throw new Error(`La release ${tag} no trae ${name}`);
@@ -109,7 +118,6 @@ class Drop < Formula
 end
 `;
 
-const before = fs.existsSync(FORMULA) ? fs.readFileSync(FORMULA, 'utf8') : '';
 fs.writeFileSync(FORMULA, formula);
 fs.writeFileSync('.version', version + '\n');
 console.log(before === formula ? `Sin cambios: drop ${version}` : `Formula/drop.rb -> drop ${version}`);
