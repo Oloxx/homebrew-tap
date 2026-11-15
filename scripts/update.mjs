@@ -72,7 +72,6 @@ const target = (suffix) => {
 };
 const t = {
   macArm: target('macos-arm64'),
-  macIntel: target('macos-x64'),
   linuxArm: target('linux-arm64'),
   linuxIntel: target('linux-x64'),
 };
@@ -89,10 +88,6 @@ class Drop < Formula
     on_arm do
       url "${t.macArm.url}"
       sha256 "${t.macArm.sha}"
-    end
-    on_intel do
-      url "${t.macIntel.url}"
-      sha256 "${t.macIntel.sha}"
     end
   end
 

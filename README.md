@@ -1,7 +1,7 @@
 # Homebrew tap de drop
 
 Fórmula de [drop](https://github.com/Oloxx/drop), transferencia de archivos P2P cifrada de
-extremo a extremo, para macOS (Apple Silicon e Intel) y Linux (x64 y arm64).
+extremo a extremo, para macOS (Apple Silicon) y Linux (x64 y arm64).
 
 ```bash
 brew install oloxx/tap/drop
@@ -22,4 +22,4 @@ RWQqNnfqvCrj+eavJ9njz2vCoHaC8YnLqjsvNBMndz3hBroQLpou7+Kp
 ```
 
 El workflow `Actualizar y probar` lo ejecuta cada seis horas, hace commit si hay versión nueva e
-instala la fórmula de verdad en macOS (arm64 e Intel) y Linux antes de darla por buena.
+instala la fórmula de verdad en macOS (Apple Silicon) y Linux antes de darla por buena.
