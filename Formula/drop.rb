@@ -1,26 +1,26 @@
-# Generado por scripts/update.mjs a partir del SHA256SUMS firmado de v0.14.1.
+# Generado por scripts/update.mjs a partir del SHA256SUMS firmado de v0.15.0.
 # No lo edites a mano: el siguiente update lo pisa.
 class Drop < Formula
   desc "Peer-to-peer file transfer, end-to-end encrypted, with a code you can say aloud"
   homepage "https://drop.oloxx.dev"
-  version "0.14.1"
+  version "0.15.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/Oloxx/drop/releases/download/v0.14.1/drop-v0.14.1-macos-arm64.tar.gz"
-      sha256 "49117ce9aa07a7adeed5f76a4fab096e400e7bdff1876b408f979a0119682165"
+      url "https://github.com/Oloxx/drop/releases/download/v0.15.0/drop-v0.15.0-macos-arm64.tar.gz"
+      sha256 "36510ec7bbdff7a6cb8c49c7b6fb5afb71bc68cf0ac2b9e3c854810f41a0418b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/Oloxx/drop/releases/download/v0.14.1/drop-v0.14.1-linux-arm64.tar.gz"
-      sha256 "cc6d407065acf79914fa384bfd7d606df3ef692a77a28285e8bc934cda3c8cde"
+      url "https://github.com/Oloxx/drop/releases/download/v0.15.0/drop-v0.15.0-linux-arm64.tar.gz"
+      sha256 "251350288b10cb4281a27a038beee00ce96ff0342f1211f4ab2b07c82077c203"
     end
     on_intel do
-      url "https://github.com/Oloxx/drop/releases/download/v0.14.1/drop-v0.14.1-linux-x64.tar.gz"
-      sha256 "7036394e79baf6ce294fee5e523dfbfa447911318d5e74517c149656c03224d4"
+      url "https://github.com/Oloxx/drop/releases/download/v0.15.0/drop-v0.15.0-linux-x64.tar.gz"
+      sha256 "1bf562ff40c353ed64d940d57bd782239d0da2058c2c0f2c43c2efbe2fe8be32"
     end
   end
 
